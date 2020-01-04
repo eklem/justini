@@ -1,0 +1,29 @@
+{
+  "name": "justini",
+  "version": "0.0.1",
+  "description": "Just in time info when entering or exiting your home. Raspberry Pi Zero W + Waveshare e-paper display. ",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eklem/justini.git"
+  },
+  "keywords": [
+    "home",
+    "info",
+    "dashboard",
+    "raspberrypi",
+    "e-paper"
+  ],
+  "dependencies": {
+    "xmltojson": "1.3.5"
+  },
+  "author": "Espen Klem",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/eklem/justini/issues"
+  },
+  "homepage": "https://github.com/eklem/justini#readme"
+}
