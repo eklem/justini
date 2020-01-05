@@ -2,11 +2,234 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>Title of the document</title>
+    <title>Local weather</title>
     <script type="text/javascript" src="../node_modules/xmltojson/lib/xmlToJSON.js"></script>
-    <script type="text/javascript" src="./index.js"></script>
+    <!-- <script type="text/javascript" src="./index.js"></script> -->
+    <link rel="stylesheet" href="./yr-icons/style.css">
+    <style>
+      .ico {
+        font-size:3em;
+      }
+      .icob {
+        font-size:2em;
+      }
+    </style>
   </head>
   <body>
-    chech console.log
+    <h1>Weather dashboard</h1>
+    <h2>weather from met.no</h2>
+    <p>chech console.log </p>
+
+    <h2>icons</h2>
+    <h3>Clear sky</h3>
+    <p>
+      <span class="ico yr-icon-01d"></span>
+      <span class="ico yr-icon-01n"></span>
+      <span class="ico yr-icon-01m"></span>
+    </p>
+    <h3>Fair</h3>
+    <p>
+      <span class="ico yr-icon-02d"></span>
+      <span class="ico yr-icon-02n"></span>
+      <span class="ico yr-icon-02m"></span>
+    </p>
+    <h3>Partly cloudy</h3>
+    <p>
+      <span class="ico yr-icon-03d"></span>
+      <span class="ico yr-icon-03n"></span>
+      <span class="ico yr-icon-03m"></span>
+    </p>
+    <h3>Cloudy</h3>
+    <p>
+      <span class="icob yr-icon-04"></span>
+    </p>
+    <h3>Light rain showers</h3>
+    <p>
+      <span class="ico yr-icon-40d"></span>
+      <span class="ico yr-icon-40n"></span>
+      <span class="ico yr-icon-40m"></span>
+    </p>
+    <h3>Rain showers</h3>
+    <p>
+      <span class="ico yr-icon-05d"></span>
+      <span class="ico yr-icon-05n"></span>
+      <span class="ico yr-icon-05m"></span>
+    </p>
+    <h3>Heavy rain showers</h3>
+    <p>
+      <span class="ico yr-icon-41d"></span>
+      <span class="ico yr-icon-41n"></span>
+      <span class="ico yr-icon-41m"></span>
+    </p>
+    <h3>Light rain showers and thunder</h3>
+    <p>
+      <span class="ico yr-icon-24d"></span>
+      <span class="ico yr-icon-24n"></span>
+      <span class="ico yr-icon-24m"></span>
+    </p>
+    <h3>Rain showers and thunder</h3>
+    <p>
+      <span class="ico yr-icon-06d"></span>
+      <span class="ico yr-icon-06n"></span>
+      <span class="ico yr-icon-06m"></span>
+    </p>
+    <h3>Heavy rain showers and thunder</h3>
+    <p>
+      <span class="ico yr-icon-25d"></span>
+      <span class="ico yr-icon-25n"></span>
+      <span class="ico yr-icon-25m"></span>
+    </p>
+    <h3>Light sleet showers</h3>
+    <p>
+      <span class="ico yr-icon-42d"></span>
+      <span class="ico yr-icon-42n"></span>
+      <span class="ico yr-icon-42m"></span>
+    </p>
+    <h3>Sleet showers</h3>
+    <p>
+      <span class="ico yr-icon-07d"></span>
+      <span class="ico yr-icon-07n"></span>
+      <span class="ico yr-icon-07m"></span>
+    </p>
+    <h3>Heavy sleet showers</h3>
+    <p>
+      <span class="ico yr-icon-43d"></span>
+      <span class="ico yr-icon-43n"></span>
+      <span class="ico yr-icon-43m"></span>
+    </p>
+    <h3>Lights sleet showers and thunder</h3>
+    <p>
+      <span class="ico yr-icon-26d"></span>
+      <span class="ico yr-icon-26n"></span>
+      <span class="ico yr-icon-26m"></span>
+    </p>
+    <h3>Sleet showers and thunder</h3>
+    <p>
+      <span class="ico yr-icon-20d"></span>
+      <span class="ico yr-icon-20n"></span>
+      <span class="ico yr-icon-20m"></span>
+    </p>
+    <h3>Heavy sleet showers and thunder</h3>
+    <p>
+      <span class="ico yr-icon-27d"></span>
+      <span class="ico yr-icon-27n"></span>
+      <span class="ico yr-icon-27m"></span>
+    </p>  
+    <h3>Light snow showers</h3>
+    <p>
+      <span class="ico yr-icon-44d"></span>
+      <span class="ico yr-icon-44n"></span>
+      <span class="ico yr-icon-44m"></span>
+    </p>
+    <h3>Snow showers</h3>
+    <p>
+      <span class="ico yr-icon-08d"></span>
+      <span class="ico yr-icon-08n"></span>
+      <span class="ico yr-icon-08m"></span>
+    </p>
+    <h3>Heavy snow showers</h3>
+    <p>
+      <span class="ico yr-icon-45d"></span>
+      <span class="ico yr-icon-45n"></span>
+      <span class="ico yr-icon-45m"></span>
+    </p>
+
+
+    <h3>Lights snow showers and thunder</h3>
+    <p>
+      <span class="ico yr-icon-28d"></span>
+      <span class="ico yr-icon-28n"></span>
+      <span class="ico yr-icon-28m"></span>
+    </p>
+    <h3>Snow showers and thunder</h3>
+    <p>
+      <span class="ico yr-icon-21d"></span>
+      <span class="ico yr-icon-21n"></span>
+      <span class="ico yr-icon-21m"></span>
+    </p>
+    <h3>Heavy snow showers and thunder</h3>
+    <p>
+      <span class="ico yr-icon-29d"></span>
+      <span class="ico yr-icon-29n"></span>
+      <span class="ico yr-icon-29m"></span>
+    </p>
+    <h3>Light rain</h3>
+    <p>
+      <span class="ico yr-icon-46"></span>
+    </p>
+    <h3>Rain</h3>
+    <p>
+      <span class="ico yr-icon-09"></span>
+    </p>
+    <h3>Heavy rain</h3>
+    <p>
+      <span class="ico yr-icon-10"></span>
+    </p>
+    <h3>ight rain and thunder</h3>
+    <p>
+      <span class="ico yr-icon-30"></span>
+    </p>
+    <h3>Rain and thunder</h3>
+    <p>
+      <span class="ico yr-icon-22"></span>
+    </p>
+    <h3>Heavy rain and thunder</h3>
+    <p>
+      <span class="ico yr-icon-11"></span>
+    </p>
+    <h3>Light sleet</h3>
+    <p>
+      <span class="ico yr-icon-47"></span>
+    </p>
+    <h3>Sleet</h3>
+    <p>
+      <span class="ico yr-icon-12"></span>
+    </p>
+    <h3>Heavy sleet</h3>
+    <p>
+      <span class="ico yr-icon-48"></span>
+    </p>
+    <h3>Light sleet and thunder</h3>
+    <p>
+      <span class="ico yr-icon-31"></span>
+    </p>
+    <h3>Sleet and thunder</h3>
+    <p>
+      <span class="ico yr-icon-23"></span>
+    </p>
+    <h3>Heavy sleet and thunder</h3>
+    <p>
+      <span class="ico yr-icon-32"></span>
+    </p>
+    <h3>Light snow</h3>
+    <p>
+      <span class="ico yr-icon-49"></span>
+    </p>
+    <h3>Snow</h3>
+    <p>
+      <span class="ico yr-icon-13"></span>
+    </p>
+    <h3>Heavy snow</h3>
+    <p>
+      <span class="ico yr-icon-50"></span>
+    </p>
+
+
+    <h3>Light snow and thunder</h3>
+    <p>
+      <span class="ico yr-icon-33"></span>
+    </p>
+    <h3>Snow and thunder</h3>
+    <p>
+      <span class="ico yr-icon-14"></span>
+    </p>
+    <h3>Heavy snow and thunder</h3>
+    <p>
+      <span class="ico yr-icon-34"></span>
+    </p>
+    <h3>Fog</h3>
+    <p>
+      <span class="ico yr-icon-15"></span>
+    </p>
   </body>
 </html> 
