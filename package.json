@@ -18,7 +18,6 @@
     "e-paper"
   ],
   "dependencies": {
-    "xmltojson": "1.3.5"
   },
   "author": "Espen Klem",
   "license": "MIT",
