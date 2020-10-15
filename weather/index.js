@@ -1,10 +1,10 @@
-fetch('https://api.met.no/weatherapi/locationforecast/1.9/?lat=60.10&lon=9.58&msl=70')
-  .then(response => response.text())
-  .then((weatherXML) => {
-    let weatherJSON = xmlToJSON.parseString(weatherXML)
-    // console.log(JSON.stringify(weatherJSON, null, 2))
-    console.log(JSON.stringify(weatherJSON.weatherdata[0].product[0].time[10], null, 2))
+fetch('https://api.met.no/weatherapi/locationforecast/2.0/compact?lat=59.90&lon=10.79&altitude=49')
+  .then(response => response.json())
+  .then(data => {
+    console.log(JSON.stringify(data.properties.timeseries[0].data.next_1_hours.summary.symbol_code,  null, ' '))
+    console.log(JSON.stringify(data.properties.timeseries[0].data.instant.details.wind_speed + ' m/s',  null, ' '))
+    console.log(JSON.stringify(data.properties.timeseries[0].data.instant.details.wind_from_direction + ' degrees',  null, ' '))
+    console.log(JSON.stringify(data.properties.timeseries[0].data.instant.details.air_temperature + ' Celcius',  null, ' '))
+    // console.log(JSON.stringify(data.properties.timeseries[0].data,  null, ' '))
+    // console.log(JSON.stringify(weatherJSON.weatherdata[0].product[0].time[10], null, 2))
   })
-/*  testString = '<xml><a>It Works!</a></xml>';    // get some xml (string or document/node)
-  result = xmlToJSON.parseString(testString);  // parse
-  console.log(JSON.stringify(result))*/
