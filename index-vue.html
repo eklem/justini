@@ -6,7 +6,7 @@
   <title>Justini - Just in time info display</title>
   <meta name='viewport' content='width=device-width, initial-scale=1'>
   <script src="https://unpkg.com/vue@3.0.1/dist/vue.global.js"></script>
-  <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+  <link rel="stylesheet" href="./node_modules/yr-icons/style.css">
 </head>
 <body>
   <div id="app"></div>
@@ -19,9 +19,11 @@
             config: {
               lat: '59.90',
               lon: '10.79',
-              alt: '49'
+              alt: '49',
+              timeZone: 1,
+              dst: 1
             },
-            weather: {}
+            weather: []
           }
         },
         methods: {
@@ -30,17 +32,40 @@
             fetch(url)
               .then(response => response.json())
               .then(data => {
-                console.log(JSON.stringify(data))
+                // set now array 
                 let weather = data.properties.timeseries.slice(0, 13)
-                console.log('length: ' + weather.length)
-                this.weather = data.properties.timeseries
+                this.weather = weather.map(function (item) {
+                  // Calculate hour
+                  const time = new Date(item.time)
+                  const hour = time.getUTCHours() + config.timeZone + config.dst;
+                  // return weather object
+                  return {
+                    hour: hour,
+                    summary: 'yr-icon-' + item.data.next_1_hours.summary.symbol_code,
+                    temperature: item.data.instant.details.air_temperature,
+                    windFromDirection: item.data.instant.details.wind_from_direction,
+                    windSpeed: item.data.instant.details.wind_speed
+                  }
+                })
+                // set forcast array
+                console.log(JSON.stringify(data))
               })
           }
         },
         mounted: function() {
           this.getWeather(this.config)
         },
-        template: `<h1>Hello {{ weather[0] }}</h1>`,
+        template: `
+          <div v-for="(item, index) in weather">
+            <pre>
+              Hour: {{ item.hour }}
+              <span class="ico" :class="item.summary"></span>
+              Temp: {{ item.temperature }} °C
+              Wind from: {{ item.windFromDirection }}°
+              Wind speed: {{ item.windSpeed }} m/s
+            </pre>
+          </div>
+        `,
       }
 
       createApp(App).mount("#app")
