@@ -1,397 +1,88 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <title>Local weather</title>
-    <script type="text/javascript" src="./index.js"></script>
-    <link rel="stylesheet" href="./node_modules/yr-icons/style.css">
-    <style>
-      .ico {
-        font-size:3em;
-      }
-      .icob {
-        font-size:2em;
-      }
-    </style>
-  </head>
-  <body>
-    <h1>Weather dashboard</h1>
-    <h2>weather from met.no</h2>
-    <p>chech console.log </p>
+<head>
+  <meta charset='utf-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <title>Justini - Just in time info display</title>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <script src="https://unpkg.com/vue@3.0.1/dist/vue.global.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/pure-min.css" integrity="sha384-cg6SkqEOCV1NbJoCu11+bm0NvBRc8IYLRGXkmNrqUBfTjmMYwNKPWBTIKyw9mHNJ" crossorigin="anonymous">
+  <link rel="stylesheet" href="./node_modules/yr-icons/style.css">
+  <link rel="stylesheet" href="./main.css">
 
-    <h2>icons</h2>
-    <h3>Clear sky</h3>
-    <p>
-      <span class="ico yr-icon-01d"></span>
-      clearsky_day
-    </p>
-    <p>
-      <span class="ico yr-icon-01n"></span>
-      clearsky_night
-    </p>
-    <p>
-      <span class="ico yr-icon-01m"></span>
-      clearsky_polartwilight
-    </p>
-    <h3>Fair</h3>
-    <p>
-      <span class="ico yr-icon-02d"></span>
-      fair_day
-    </p>
-    <p>
-      <span class="ico yr-icon-02n"></span>
-      fair_night
-    </p>
-    <p>
-      <span class="ico yr-icon-02m"></span>
-      fair_polartwilight
-    </p>
-    <h3>Partly cloudy</h3>
-    <p>
-      <span class="ico yr-icon-03d"></span>
-      partlycloudy_day
-    </p>
-    <p>
-      <span class="ico yr-icon-03n"></span>
-      partlycloudy_night
-    </p>
-    <p>
-      <span class="ico yr-icon-03m"></span>
-      partlycloudy_polartwilight
-    </p>
-    <h3>Cloudy</h3>
-    <p>
-      <span class="icob yr-icon-04"></span>
-      cloudy
-    </p>
-    <h3>Light rain showers</h3>
-    <p>
-      <span class="ico yr-icon-40d"></span>
-      lightrainshowers_day
-    </p>
-    <p>
-      <span class="ico yr-icon-40n"></span>
-      lightrainshowers_night
-    </p>
-    <p>
-      <span class="ico yr-icon-40m"></span>
-      lightrainshowers_polartwilight
-    </p>
-    <h3>Rain showers</h3>
-    <p>
-      <span class="ico yr-icon-05d"></span>
-      rainshowers_day
-    </p>
-    <p>
-      <span class="ico yr-icon-05n"></span>
-      rainshowers_night
-    </p>
-    <p>
-      <span class="ico yr-icon-05m"></span>
-      rainshowers_polartwilight
-    </p>
-    <h3>Heavy rain showers</h3>
-    <p>
-      <span class="ico yr-icon-41d"></span>
-      heavyrainshowers_day
-    </p>
-    <p>
-      <span class="ico yr-icon-41n"></span>
-      heavyrainshowers_night
-    </p>
-    <p>
-      <span class="ico yr-icon-41m"></span>
-      heavyrainshowers_polartwilight
-    </p>
-    <h3>Light rain showers and thunder</h3>
-    <p>
-      <span class="ico yr-icon-24d"></span>
-      lightrainshowersandthunder_day
-    </p>
-    <p>
-      <span class="ico yr-icon-24n"></span>
-      lightrainshowersandthunder_night
-    </p>
-    <p>
-      <span class="ico yr-icon-24m"></span>
-      lightrainshowersandthunder_polartwilight
-    </p>
-    <h3>Rain showers and thunder</h3>
-    <p>
-      <span class="ico yr-icon-06d"></span>
-      rainshowersandthunder_day
-    </p>
-    <p>
-      <span class="ico yr-icon-06n"></span>
-      rainshowersandthunder_night
-    </p>
-    <p>
-      <span class="ico yr-icon-06m"></span>
-      rainshowersandthunder_polartwilight
-    </p>
-    <h3>Heavy rain showers and thunder</h3>
-    <p>
-      <span class="ico yr-icon-25d"></span>
-      heavyrainshowersandthunder_day
-    </p>
-    <p>
-      <span class="ico yr-icon-25n"></span>
-      heavyrainshowersandthunder_night
-    </p>
-    <p>
-      <span class="ico yr-icon-25m"></span>
-      heavyrainshowersandthunder_polartwilight
-    </p>
-    <h3>Light sleet showers</h3>
-    <p>
-      <span class="ico yr-icon-42d"></span>
-      lightsleetshowers_day
-    </p>
-    <p>
-      <span class="ico yr-icon-42n"></span>
-      lightsleetshowers_night
-    </p>
-    <p>
-      <span class="ico yr-icon-42m"></span>
-      lightsleetshowers_polartwilight
-    </p>
-    <h3>Sleet showers</h3>
-    <p>
-      <span class="ico yr-icon-07d"></span>
-      sleetshowers_day
-    </p>
-    <p>
-      <span class="ico yr-icon-07n"></span>
-      sleetshowers_night
-    </p>
-    <p>
-      <span class="ico yr-icon-07m"></span>
-      sleetshowers_polartwilight
-    </p>
-    <h3>Heavy sleet showers</h3>
-    <p>
-      <span class="ico yr-icon-43d"></span>
-      heavysleetshowers_day
-    </p>
-    <p>
-      <span class="ico yr-icon-43n"></span>
-      heavysleetshowers_night
-    </p>
-    <p>
-      <span class="ico yr-icon-43m"></span>
-      heavysleetshowers_polartwilight
-    </p>
-    <h3>Lights sleet showers and thunder</h3>
-    <p>
-      <span class="ico yr-icon-26d"></span>
-      lightssleetshowersandthunder_day
-    </p>
-    <p>
-      <span class="ico yr-icon-26n"></span>
-      lightssleetshowersandthunder_night
-    </p>
-    <p>
-      <span class="ico yr-icon-26m"></span>
-      lightssleetshowersandthunder_polartwilight
-    </p>
-    <h3>Sleet showers and thunder</h3>
-    <p>
-      <span class="ico yr-icon-20d"></span>
-      sleetshowersandthunder_day
-    </p>
-    <p>
-      <span class="ico yr-icon-20n"></span>
-      sleetshowersandthunder_night
-    </p>
-    <p>
-      <span class="ico yr-icon-20m"></span>
-      sleetshowersandthunder_polartwilight
-    </p>
-    <h3>Heavy sleet showers and thunder</h3>
-    <p>
-      <span class="ico yr-icon-27d"></span>
-      heavysleetshowersandthunder_day
-    </p>
-    <p>
-      <span class="ico yr-icon-27n"></span>
-      heavysleetshowersandthunder_night
-    </p>
-    <p>
-      <span class="ico yr-icon-27m"></span>
-      heavysleetshowersandthunder_polartwilight
-    </p>  
-    <h3>Light snow showers</h3>
-    <p>
-      <span class="ico yr-icon-44d"></span>
-      lightsnowshowers_day
-    </p>
-    <p>
-      <span class="ico yr-icon-44n"></span>
-      lightsnowshowers_night
-    </p>
-    <p>
-      <span class="ico yr-icon-44m"></span>
-      lightsnowshowers_polartwilight
-    </p>
-    <h3>Snow showers</h3>
-    <p>
-      <span class="ico yr-icon-08d"></span>
-      snowshowers_day
-    </p>
-    <p>
-      <span class="ico yr-icon-08n"></span>
-      snowshowers_night
-    </p>
-    <p>
-      <span class="ico yr-icon-08m"></span>
-      snowshowers_polartwilight
-    </p>
-    <h3>Heavy snow showers</h3>
-    <p>
-      <span class="ico yr-icon-45d"></span>
-      heavysnowshowers_day
-    </p>
-    <p>
-      <span class="ico yr-icon-45n"></span>
-      heavysnowshowers_night
-    </p>
-    <p>
-      <span class="ico yr-icon-45m"></span>
-      heavysnowshowers_polartwilight
-    </p>
-    <h3>Lights snow showers and thunder</h3>
-    <p>
-      <span class="ico yr-icon-28d"></span>
-      lightssnowshowersandthunder_day
-    </p>
-    <p>
-      <span class="ico yr-icon-28n"></span>
-      lightssnowshowersandthunder_night
-    </p>
-    <p>
-      <span class="ico yr-icon-28m"></span>
-      lightssnowshowersandthunder_polartwilight
-    </p>
-    <h3>Snow showers and thunder</h3>
-    <p>
-      <span class="ico yr-icon-21d"></span>
-      snowshowersandthunder_day
-    </p>
-    <p>
-      <span class="ico yr-icon-21n"></span>
-      snowshowersandthunder_night
-    </p>
-    <p>
-      <span class="ico yr-icon-21m"></span>
-      snowshowersandthunder_polartwilight
-    </p>
-    <h3>Heavy snow showers and thunder</h3>
-    <p>
-      <span class="ico yr-icon-29d"></span>
-      heavysnowshowersandthunder_day
-    </p>
-    <p>
-      <span class="ico yr-icon-29n"></span>
-      heavysnowshowersandthunder_night
-    </p>
-    <p>
-      <span class="ico yr-icon-29m"></span>
-      heavysnowshowersandthunder_polartwilight
-    </p>
-    <h3>Light rain</h3>
-    <p>
-      <span class="ico yr-icon-46"></span>
-      lightrain
-    </p>
-    <h3>Rain</h3>
-    <p>
-      <span class="ico yr-icon-09"></span>
-      rain
-    </p>
-    <h3>Heavy rain</h3>
-    <p>
-      <span class="ico yr-icon-10"></span>
-      heavyrain
-    </p>
-    <h3>Light rain and thunder</h3>
-    <p>
-      <span class="ico yr-icon-30"></span>
-      lightrainandthunder
-    </p>
-    <h3>Rain and thunder</h3>
-    <p>
-      <span class="ico yr-icon-22"></span>
-      rainandthunder
-    </p>
-    <h3>Heavy rain and thunder</h3>
-    <p>
-      <span class="ico yr-icon-11"></span>
-      heavyrainandthunder
-    </p>
-    <h3>Light sleet</h3>
-    <p>
-      <span class="ico yr-icon-47"></span>
-      lightsleet
-    </p>
-    <h3>Sleet</h3>
-    <p>
-      <span class="ico yr-icon-12"></span>
-      sleet
-    </p>
-    <h3>Heavy sleet</h3>
-    <p>
-      <span class="ico yr-icon-48"></span>
-      heavysleet
-    </p>
-    <h3>Light sleet and thunder</h3>
-    <p>
-      <span class="ico yr-icon-31"></span>
-      lightsleetandthunder
-    </p>
-    <h3>Sleet and thunder</h3>
-    <p>
-      <span class="ico yr-icon-23"></span>
-      sleetandthunder
-    </p>
-    <h3>Heavy sleet and thunder</h3>
-    <p>
-      <span class="ico yr-icon-32"></span>
-      heavysleetandthunder
-    </p>
-    <h3>Light snow</h3>
-    <p>
-      <span class="ico yr-icon-49"></span>
-      lightsnow
-    </p>
-    <h3>Snow</h3>
-    <p>
-      <span class="ico yr-icon-13"></span>
-      snow
-    </p>
-    <h3>Heavy snow</h3>
-    <p>
-      <span class="ico yr-icon-50"></span>
-      heavysnow
-    </p>
-    <h3>Light snow and thunder</h3>
-    <p>
-      <span class="ico yr-icon-33"></span>
-      lightsnowandthunder
-    </p>
-    <h3>Snow and thunder</h3>
-    <p>
-      <span class="ico yr-icon-14"></span>
-      snowandthunder
-    </p>
-    <h3>Heavy snow and thunder</h3>
-    <p>
-      <span class="ico yr-icon-34"></span>
-      heavysnowandthunder
-    </p>
-    <h3>Fog</h3>
-    <p>
-      <span class="ico yr-icon-15"></span>
-      fog
-    </p>
-  </body>
-</html> 
+
+</head>
+<body>
+  <div id="app" class="pure-g"></div>
+    <script>
+      const { createApp } = Vue
+
+      const App = {
+        data() {
+          return {
+            config: {
+              lat: '59.90',
+              lon: '10.79',
+              alt: '49',
+              timeZone: 1,
+              dst: 1
+            },
+            weather: []
+          }
+        },
+        methods: {
+          getWeather(config) {
+            let url = 'https://api.met.no/weatherapi/locationforecast/2.0/compact?lat=' + config.lat + '&lon=' + config.lon + '&altitude=' + config.alt
+            fetch(url, {
+              headers: {
+                'User-Agent': 'github.com/eklem/justini',
+                'Accept': 'application/json'
+              }
+            })
+              .then(response => response.json())
+              .then(data => {
+                // set now array 
+                let weather = data.properties.timeseries.slice(0, 13)
+                this.weather = weather.map(function (item) {
+                  // Calculate hour
+                  const time = new Date(item.time)
+                  let hour = time.getUTCHours() + config.timeZone + config.dst;
+                  // pad short numbers
+                  hour = hour.toString()
+                  if (hour.length === 1) {
+                    hour = '0' + hour
+                  }
+                  // return weather object
+                  return {
+                    hour: hour,
+                    summary: 'yr-icon-' + item.data.next_1_hours.summary.symbol_code,
+                    temperature: item.data.instant.details.air_temperature,
+                    recipitation: item.data.next_1_hours.details.precipitation_amount,
+                    windFromDirection: item.data.instant.details.wind_from_direction,
+                    windSpeed: item.data.instant.details.wind_speed
+                  }
+                })
+                // set forcast array
+                console.log(JSON.stringify(data))
+              })
+          }
+        },
+        mounted: function() {
+          this.getWeather(this.config)
+        },
+        template: `
+          <div class="forecast pure-u-1-6" v-for="(item, index) in weather">
+              <h2>{{ item.hour }}</h2>
+              <span class="ico pure-img" :class="item.summary"></span>
+              <div>{{ item.temperature }}°Cs</div>
+              <div>{{ item.recipitation }} mms</div>
+              <div>{{ item.windSpeed }} m/s</div>
+          </div>
+        `,
+      }
+
+      createApp(App).mount("#app")
+    </script>
+
+</body>
+</html>
