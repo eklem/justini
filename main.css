@@ -9,6 +9,8 @@ h1, h2 {
   font-size:4rem;
   text-align: center;
 }
-.forecast div {
+.forecast p {
   text-align:center;
+  margin:5px 0 0 0;
+  
 }

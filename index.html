@@ -69,9 +69,9 @@
           <div class="forecast pure-u-1-6" v-for="(item, index) in weather">
               <h2>{{ item.hour }}</h2>
               <span class="ico pure-img" :class="item.summary"></span>
-              <div>{{ item.temperature }}°Cs</div>
-              <div>{{ item.recipitation }} mms</div>
-              <div>{{ item.windSpeed }} m/s</div>
+              <p>{{ item.temperature }}°C</p>
+              <p>{{ item.recipitation }} mm</p>
+              <p>{{ item.windSpeed }} m/s</p>
           </div>
         `,
       }
