@@ -33,12 +33,7 @@
         methods: {
           getWeather(config) {
             let url = 'https://api.met.no/weatherapi/locationforecast/2.0/compact?lat=' + config.lat + '&lon=' + config.lon + '&altitude=' + config.alt
-            fetch(url, {
-              headers: {
-                'User-Agent': 'github.com/eklem/justini',
-                'Accept': 'application/json'
-              }
-            })
+            fetch(url)
               .then(response => response.json())
               .then(data => {
                 // set now array 
