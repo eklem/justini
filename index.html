@@ -23,9 +23,7 @@
             config: {
               lat: '59.90',
               lon: '10.79',
-              alt: '49',
-              timeZone: 1,
-              dst: 1
+              alt: '49'
             },
             weather: []
           }
@@ -41,7 +39,7 @@
                 this.weather = weather.map(function (item) {
                   // Calculate hour
                   const time = new Date(item.time)
-                  let hour = time.getUTCHours() + config.timeZone + config.dst;
+                  let hour = time.getHours();
                   // pad short numbers
                   hour = hour.toString()
                   if (hour.length === 1) {
