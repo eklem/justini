@@ -86,11 +86,11 @@
           <div class="forecast pure-u-1-6" v-for="(item, index) in weather">
               <h2>{{ item.hour }}</h2>
               <i class="ico" :class="item.summary"></i>
-              <i class="ico" :class="(item.windSpeed),(item.windFromDirection)"></i>
+              <i class="ico" :class="[item.windSpeed, item.windFromDirection]"></i>
               <p>{{ item.temperature }}°C</p>
               <p>{{ item.recipitation }} mm</p>
           </div>
-        `,
+        `
       }
 
       createApp(App).mount("#app")
