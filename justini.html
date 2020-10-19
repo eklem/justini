@@ -63,6 +63,8 @@
 
                   // rounding wind direction to nearest integer
                   const windDirection = Math.round(item.data.instant.details.wind_from_direction)
+                  
+                  const windMessage = 'Wind speed: ' + windSpeed + ' m/s, coming from: ' + windDirection + '°'
 
                   // return weather object
                   return {
@@ -71,7 +73,8 @@
                     temperature: item.data.instant.details.air_temperature,
                     recipitation: item.data.next_1_hours.details.precipitation_amount,
                     windFromDirection: 'yr-wind-from-direction-' + Math.round(item.data.instant.details.wind_from_direction),
-                    windSpeed: 'yr-wind-beauf-' + beaufort
+                    windSpeed: 'yr-wind-beauf-' + beaufort,
+                    windMessage: windMessage 
                   }
                 })
                 // set forcast array
@@ -84,11 +87,11 @@
         },
         template: `
           <div class="forecast pure-u-1-6" v-for="(item, index) in weather">
-              <h2>{{ item.hour }}</h2>
-              <i class="ico" :class="item.summary"></i>
-              <i class="ico" :class="[item.windSpeed, item.windFromDirection]"></i>
-              <p>{{ item.temperature }}°C</p>
-              <p>{{ item.recipitation }} mm</p>
+              <h2 title="time">{{ item.hour }}</h2>
+              <i class="ico" :class="item.summary" title="Weather summary"></i>
+              <i class="ico wind" :class="[item.windSpeed, item.windFromDirection]" :title="item.windMessage"></i>
+              <p title="Temperature">{{ item.temperature }}°C</p>
+              <p title="recipitation">{{ item.recipitation }} mm</p>
           </div>
         `
       }
