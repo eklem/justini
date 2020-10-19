@@ -35,7 +35,7 @@
               .then(response => response.json())
               .then(data => {
                 // set now array 
-                let weather = data.properties.timeseries.slice(0, 13)
+                let weather = data.properties.timeseries.slice(0, 12)
                 this.weather = weather.map(function (item) {
                   // Calculate hour
                   const time = new Date(item.time)
@@ -45,14 +45,33 @@
                   if (hour.length === 1) {
                     hour = '0' + hour
                   }
+                  // converting wind to beaufort scale
+                  const windSpeed = item.data.instant.details.wind_speed
+                  if (windSpeed <= 0.2) { beaufort = 0 }
+                  if (windSpeed >= 0.3 && windSpeed <= 1.5) { beaufort = 1 }
+                  if (windSpeed >= 1.6 && windSpeed <= 3.3) { beaufort = 2 }
+                  if (windSpeed >= 3.4 && windSpeed <= 5.4) { beaufort = 3 }
+                  if (windSpeed >= 5.5 && windSpeed <= 7.9) { beaufort = 4 }
+                  if (windSpeed >= 8 && windSpeed <= 10.7) { beaufort = 5 }
+                  if (windSpeed >= 10.8 && windSpeed <= 13.8) { beaufort = 6 }
+                  if (windSpeed >= 13.9 && windSpeed <= 17.1) { beaufort = 7 }
+                  if (windSpeed >= 17.2 && windSpeed <= 20.7) { beaufort = 8 }
+                  if (windSpeed >= 20.8 && windSpeed <= 24.4) { beaufort = 9 }
+                  if (windSpeed >= 24.5 && windSpeed <= 28.4) { beaufort = 10 }
+                  if (windSpeed >= 28.5 && windSpeed <= 32.6) { beaufort = 11 }
+                  if (windSpeed >= 32.7) { beaufort = 12 }
+
+                  // rounding wind direction to nearest integer
+                  const windDirection = Math.round(item.data.instant.details.wind_from_direction)
+
                   // return weather object
                   return {
                     hour: hour,
                     summary: 'yr-icon-' + item.data.next_1_hours.summary.symbol_code,
                     temperature: item.data.instant.details.air_temperature,
                     recipitation: item.data.next_1_hours.details.precipitation_amount,
-                    windFromDirection: item.data.instant.details.wind_from_direction,
-                    windSpeed: item.data.instant.details.wind_speed
+                    windFromDirection: 'yr-wind-from-direction-' + Math.round(item.data.instant.details.wind_from_direction),
+                    windSpeed: 'yr-wind-beauf-' + beaufort
                   }
                 })
                 // set forcast array
@@ -66,10 +85,10 @@
         template: `
           <div class="forecast pure-u-1-6" v-for="(item, index) in weather">
               <h2>{{ item.hour }}</h2>
-              <span class="ico pure-img" :class="item.summary"></span>
+              <i class="ico" :class="item.summary"></i>
+              <i class="ico" :class="(item.windSpeed),(item.windFromDirection)"></i>
               <p>{{ item.temperature }}°C</p>
               <p>{{ item.recipitation }} mm</p>
-              <p>{{ item.windSpeed }} m/s</p>
           </div>
         `,
       }
