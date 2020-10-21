@@ -18,7 +18,7 @@
     "e-paper"
   ],
   "dependencies": {
-    "yr-icons": "^1.0.0"
+    "yr-icons": "^1.0.1"
   },
   "author": "Espen Klem",
   "license": "MIT",
