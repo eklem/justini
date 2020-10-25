@@ -1,6 +1,6 @@
 {
   "name": "justini",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Just in time info when entering or exiting your home. Raspberry Pi Zero W + Waveshare e-paper display. ",
   "main": "index.html",
   "scripts": {
