@@ -23,7 +23,7 @@ sudo apt-get install graphicsmagick
 ```
 
 ### Python
-I don't remember how I set up this, but using Python v2.
+I don't remember how I set up this, but using Python v2. Anything that will make the Waveshare display work is okay. It can be used from a C library too.
 
 ### Node.js - latest version (v14 for now)
 [audstanley / NodeJs-Raspberry-Pi](https://github.com/audstanley/NodeJs-Raspberry-Pi)
