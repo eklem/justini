@@ -3,7 +3,7 @@ WIP. E-paper info board with different information that could be useful for when
 
 Building on [Waveshare e-paper](https://github.com/waveshare/e-Paper) and [Raspberry Pi Zero W](https://www.raspberrypi.org/products/raspberry-pi-zero-w/), but should be created to work with other screens and Linux computers as well. So I guess the push of images to the screen should only be described, but not be a part of this module.
 
-![weather screen](./screenshot.png)
+![weather screen](./img/screenshot.png)
 
 ## Hardware
 Raspberry Pi Zero WH
@@ -22,9 +22,11 @@ sudo apt-get install chromium-browser
 sudo apt-get install graphicsmagick
 ```
 
+### Python
+I don't remember how I set up this, but using Python v2.
 
 ### Node.js - latest version (v14 for now)
- [audstanley / NodeJs-Raspberry-Pi](https://github.com/audstanley/NodeJs-Raspberry-Pi)
+[audstanley / NodeJs-Raspberry-Pi](https://github.com/audstanley/NodeJs-Raspberry-Pi)
 ```console
 wget -O - https://raw.githubusercontent.com/audstanley/NodeJs-Raspberry-Pi/master/Install-Node.sh | sudo bash;
 node -v;
