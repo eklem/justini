@@ -32,7 +32,16 @@ sudo node-install -v 14;
 ```
 
 ## Running Justini
-Basically, you do three things to get the weather onto the display:
+Basically, you do three things to get the weather onto the display.
+1. Create a screenshot of justini.htm
+2. Convert it to a 1 bit .bmp file
+3. Update the screen
+
+### In crontab
+```console
+@reboot pi sleep 30 && chromium-browser --headless --virtual-time-budget=10000 --disable-gpu --screenshot=/home/pi/git_modules/justini/img/screenshot.png --window-size=800,480 /home/pi/git_modules/justini/justini.html && gm convert -depth 1 /home/pi/git_modules/justini/img/screenshot.png /home/pi/git_modules/justini/img/screenshot.bmp && python /home/pi/git_modules/justini/python/justini.py
+```
+
 
 ### Screenshot of HTML page
 ```console
@@ -49,9 +58,3 @@ gm convert -depth 1 screenshot.png screenshot.bmp
 python justini.py
 ```
 ... need to add python and waveshare install
-
-
-### In crontab
-```bash
-@reboot pi sleep 60 && chromium-browser --headless --virtual-time-budget=10000 --disable-gpu --screenshot=/home/pi/git_modules/justini/img/screenshot.png --window-size=800,480 /home/pi/git_modules/justini/justini.html && gm convert -depth 1 /home/pi/git_modules/justini/img/screenshot.png /home/pi/git_modules/justini/img/screenshot.bmp && python /home/pi/git_modules/justini/python/justini.py
-```
