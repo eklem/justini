@@ -7,7 +7,7 @@ Building on [Waveshare e-paper](https://github.com/waveshare/e-Paper) and [Raspb
 
 ## Hardware
 Raspberry Pi Zero WH
-E-paper screen - [800×480, 7.5inch E-Ink display - Hat for Raspberry P]i(https://www.waveshare.com/7.5inch-e-paper-hat.htm)
+E-paper screen - [800×480, 7.5inch E-Ink display - Hat for Raspberry Pi](https://www.waveshare.com/7.5inch-e-paper-hat.htm)
 Real-time clock - [WittyPi Mini - RTC + Power Management for Raspberry Pi](https://thepihut.com/products/witty-pi-3-mini-rtc-power-management-for-raspberry-pi-zero)  - [Documentation](http://www.uugear.com/doc/WittyPiMini_UserManual.pdf)
 
 ## Packages to install
