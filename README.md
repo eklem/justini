@@ -33,6 +33,11 @@ node -v;
 sudo node-install -v 14;
 ```
 
+### Justini
+```console
+npm i justini
+```
+
 ## Running Justini
 Basically, you do three things to get the weather onto the display.
 1. Create a screenshot of justini.htm
@@ -41,7 +46,7 @@ Basically, you do three things to get the weather onto the display.
 
 ### In crontab
 ```console
-@reboot pi sleep 30 && chromium-browser --headless --virtual-time-budget=10000 --disable-gpu --screenshot=/home/pi/git_modules/justini/img/screenshot.png --window-size=800,480 /home/pi/git_modules/justini/justini.html && gm convert -depth 1 /home/pi/git_modules/justini/img/screenshot.png /home/pi/git_modules/justini/img/screenshot.bmp && python /home/pi/git_modules/justini/python/justini.py
+@reboot pi sleep 30 && chromium-browser --headless --virtual-time-budget=10000 --disable-gpu --screenshot=/home/pi/node_modules/justini/img/screenshot.png --window-size=800,480 /home/pi/node_modules/justini/justini.html && gm convert -depth 1 /home/pi/node_modules/justini/img/screenshot.png /home/pi/node_modules/justini/img/screenshot.bmp && python /home/pi/node_modules/justini/python/justini.py
 ```
 
 
