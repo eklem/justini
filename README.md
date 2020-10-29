@@ -3,7 +3,7 @@ WIP. E-paper info board with different information that could be useful for when
 
 Building on [Waveshare e-paper](https://github.com/waveshare/e-Paper) and [Raspberry Pi Zero W](https://www.raspberrypi.org/products/raspberry-pi-zero-w/), but should be created to work with other screens and Linux computers as well. So I guess the push of images to the screen should only be described, but not be a part of this module.
 
-![weather screen](./img/screenshot.png)
+![weather screen](https://raw.githubusercontent.com/eklem/justini/trunk/DSC_5282.JPG)
 
 ## Hardware
 * Raspberry Pi Zero WH
@@ -33,6 +33,11 @@ node -v;
 sudo node-install -v 14;
 ```
 
+### Justini
+```console
+npm i justini
+```
+
 ## Running Justini
 Basically, you do three things to get the weather onto the display.
 1. Create a screenshot of justini.htm
@@ -41,7 +46,7 @@ Basically, you do three things to get the weather onto the display.
 
 ### In crontab
 ```console
-@reboot pi sleep 30 && chromium-browser --headless --virtual-time-budget=10000 --disable-gpu --screenshot=/home/pi/git_modules/justini/img/screenshot.png --window-size=800,480 /home/pi/git_modules/justini/justini.html && gm convert -depth 1 /home/pi/git_modules/justini/img/screenshot.png /home/pi/git_modules/justini/img/screenshot.bmp && python /home/pi/git_modules/justini/python/justini.py
+@reboot pi sleep 30 && chromium-browser --headless --virtual-time-budget=10000 --disable-gpu --screenshot=/home/pi/node_modules/justini/img/screenshot.png --window-size=800,480 /home/pi/node_modules/justini/justini.html && gm convert -depth 1 /home/pi/node_modules/justini/img/screenshot.png /home/pi/node_modules/justini/img/screenshot.bmp && python /home/pi/node_modules/justini/python/justini.py
 ```
 
 
