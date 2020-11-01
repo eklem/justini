@@ -1,7 +1,7 @@
 {
   "name": "justini",
-  "version": "0.1.2",
-  "description": "Just in time info when entering or exiting your home. Raspberry Pi Zero W + Waveshare e-paper display. ",
+  "version": "0.1.3",
+  "description": "Just in time info when entering or exiting your home. Raspberry Pi Zero W + Waveshare e-paper display.",
   "main": "index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

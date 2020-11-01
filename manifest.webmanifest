@@ -1,0 +1,22 @@
+{
+  "short_name": "Justini",
+  "name": "Justini: Just in time information",
+  "description": "Just in time info when entering or exiting your home. Raspberry Pi Zero W + Waveshare e-paper display.",
+  "icons": [
+    {
+      "src": "/img/icons-justini-192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "/img/icons-justini-512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": "./index.html",
+  "background_color": "#ffffff",
+  "display": "standalone",
+  "scope": "/justini",
+  "theme_color": "#000000"
+}
