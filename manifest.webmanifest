@@ -4,12 +4,12 @@
   "description": "Just in time info when entering or exiting your home. Raspberry Pi Zero W + Waveshare e-paper display.",
   "icons": [
     {
-      "src": "/img/icons-justini-192.png",
+      "src": "/justini/img/icons-justini-192.png",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "/img/icons-justini-512.png",
+      "src": "/justini/img/icons-justini-512.png",
       "type": "image/png",
       "sizes": "512x512"
     }
@@ -18,5 +18,20 @@
   "background_color": "#ffffff",
   "display": "standalone",
   "scope": "/justini",
-  "theme_color": "#000000"
+  "theme_color": "#000000",
+  "shortcuts": [
+    {
+      "name": "About Justini",
+      "short_name": "About",
+      "description": "About the Justini - Just in time info-app",
+      "url": "/justini/index.html",
+    },
+    {
+      "name": "Weather today",
+      "short_name": "Weather",
+      "description": "Weather the next 12 hours",
+      "url": "/justini/justini.html",
+      "icons": [{ "src": "/justini/img/icons-justini-192.png", "sizes": "192x192" }]
+    }
+  ]
 }
