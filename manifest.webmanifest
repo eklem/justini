@@ -4,12 +4,12 @@
   "description": "Just in time info when entering or exiting your home. Raspberry Pi Zero W + Waveshare e-paper display.",
   "icons": [
     {
-      "src": "./img/icons-192.png",
+      "src": "img/icons-192.png",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "./img/icons-512.png",
+      "src": "img/icons-512.png",
       "type": "image/png",
       "sizes": "512x512"
     }
@@ -17,6 +17,6 @@
   "start_url": "./index.html",
   "background_color": "#ffffff",
   "display": "fullscreen",
-  "scope": "https://eklem.github.io/justini/",
+  "scope": "/justini/",
   "theme_color": "#000000"
 }

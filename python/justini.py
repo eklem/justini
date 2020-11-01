@@ -4,7 +4,7 @@ import sys
 import os
 #picdir = os.path.join(os.path.dirname(os.path.dirname(os.path.realpath(__file__))), 'pic')
 #libdir = os.path.join(os.path.dirname(os.path.dirname(os.path.realpath(__file__))), 'lib')
-picdir = '/home/pi/git_modules/justini/img'
+picdir = '/home/pi/git_modules/justini/images'
 libdir = '/home/pi/git_modules/justini/python/lib'
 if os.path.exists(libdir):
     sys.path.append(libdir)

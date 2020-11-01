@@ -46,7 +46,7 @@ Basically, you do three things to get the weather onto the display.
 
 ### In crontab
 ```console
-@reboot pi sleep 30 && chromium-browser --headless --virtual-time-budget=10000 --disable-gpu --screenshot=/home/pi/node_modules/justini/img/screenshot.png --window-size=800,480 /home/pi/node_modules/justini/justini.html && gm convert -depth 1 /home/pi/node_modules/justini/img/screenshot.png /home/pi/node_modules/justini/img/screenshot.bmp && python /home/pi/node_modules/justini/python/justini.py
+@reboot pi sleep 30 && chromium-browser --headless --virtual-time-budget=10000 --disable-gpu --screenshot=/home/pi/node_modules/justini/images/screenshot.png --window-size=800,480 /home/pi/node_modules/justini/justini.html && gm convert -depth 1 /home/pi/node_modules/justini/images/screenshot.png /home/pi/node_modules/justini/images/screenshot.bmp && python /home/pi/node_modules/justini/python/justini.py
 ```
 
 
